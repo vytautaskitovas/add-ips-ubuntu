@@ -22,7 +22,7 @@ ip addr add $i/32 dev $INTERFACE
 echo "ip addr add $i/32 dev $INTERFACE" >> /etc/rc.local
 done
 
-sed -i '/exit 0/d' ./infile
+sed -i '/exit 0/d' /etc/rc.local
 echo "exit 0" >> /etc/rc.local
 
 echo "Script completed, info written to /etc/rc.local so ips would be added automatically upon system boot, please check network interface:"
